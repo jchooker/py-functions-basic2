@@ -2,32 +2,32 @@ from typing import Match
 import numpy as np
 
 #1 - Countdown
-# def countdown(startNum):
-#     counted=[]
-#     for i in range(startNum,-1,-1):
-#         counted.append(i)
-#     return counted
-# countVal = input("Enter a positive value from which to count down: ")
-# print(countdown(int(countVal)))
+def countdown(startNum):
+    counted=[]
+    for i in range(startNum,-1,-1):
+        counted.append(i)
+    return counted
+countVal = input("Enter a positive value from which to count down: ")
+print(countdown(int(countVal)))
 
 #2 - Print and return
-# def printReturn(arr):
-#     print(arr[0])
-#     return arr[1]
-# arr2 = []
-# arr2.append(int(input("Please input value 1: "))) 
-# arr2.append(int(input("Please input value 2: ")))
-# print(printReturn(arr2))
+def printReturn(arr):
+    print(arr[0])
+    return arr[1]
+arr2 = []
+arr2.append(int(input("Please input value 1: "))) 
+arr2.append(int(input("Please input value 2: ")))
+print(printReturn(arr2))
 
 #3 - First Plus Length
-# def firstPlusLen(arr):
-#     return arr[0] + len(arr)
-# arrScale = (int(input("Size of array?(1-15): ")))
-# ronArrTest = [None]*arrScale
-# for i in range(len(ronArrTest)):
-#     ronArrTest[i] = np.random.randint(-10,200)
-# print(ronArrTest)
-# print(firstPlusLen(ronArrTest))
+def firstPlusLen(arr):
+    return arr[0] + len(arr)
+arrScale = (int(input("Size of array?(1-15): ")))
+ronArrTest = [None]*arrScale
+for i in range(len(ronArrTest)):
+    ronArrTest[i] = np.random.randint(-10,200)
+print(ronArrTest)
+print(firstPlusLen(ronArrTest))
 
 #4 - Values Greater Than Second
 def valsGreaterThan2nd(arr):
@@ -66,3 +66,21 @@ for i in range(len(newArr)):
     newArr[i] = np.random.randint(-200,200)
 print(newArr)
 print(valsGreaterThan2nd(newArr))
+
+#5 - This Length, That Value
+def lengthAndValue(size, val):
+    x = []
+    for i in range(size):
+        x.append(val)
+    return x
+isValidInput = False
+arrSize = 0
+while not isValidInput:
+    arrSize = int(input("Enter a valid size for our array: "))
+    if arrSize > 0:
+        isValidInput = True
+    else:
+        print("PlEaSe provide valid input!")
+arrVal = 0
+arrVal = int(input("Please provide a number to populate array: "))
+print(lengthAndValue(arrSize, arrVal))
